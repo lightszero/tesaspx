@@ -1,0 +1,21 @@
+﻿{
+  "desc": "plugins 配置文件",
+  "plugins": [
+    {
+      "pname": "FBX Parser",
+      "pversion": "0.1",
+      "pfolder": "plugins/fbxp",
+      "tmpfile": "fbx",
+      "pexe": "pexe.exe"
+    },
+    {
+      "pname": "fbxrepack",
+      "pversion": "0.1f",
+      "tmpfile": "fbx",
+      "pfolder": "D:\\code.taobao.org\\hayabusa\\trunk\\fbxdumpxna\\test",
+      "pexe": "xnadump.exe"
+    }
+
+
+  ]
+}

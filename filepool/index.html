@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    文件都保存在七牛云上面<br />
+
+
+    stat.aspx 是文件状态接口
+    <br />
+    http://redmine.cafegame.cn:999/filepool/stat.aspx?name=607F940988A56EF6F58508741C980E757C081863.bin
+    <br />
+
+    upload.aspx 是文件上传接口<br />
+    file用表单形式post上来<br />
+    需要一个name参数，作为文件名，必须是sha1值作为文件名的主要部分，扩展名随意，建议 .bin .txt .jpg .png <br />
+    <p>下面是post测试</p>
+    <form action="upload.aspx" enctype="multipart/form-data" method="post">
+        <p> 插件：<input type="text" name="name" value="abcdef.jpg" /></p>
+        <p> 文件：<input type="file" name="file" /></p>
+        <p>  <input type="submit" value="提交" /></p>
+    </form>
+    <br />
+
+
+    data.aspx 是mongodb操作接口，调用的免费的mongolab的500M 数据空间<br />
+    有 new find update 三种操作<br />
+    user 作为用户名，code 作为密码<br />
+    对func=new 操作 就是 user  code 都要<br />
+    对func=find操作 可以不给code，只能查public部分，给了正确code以后，可以指定findproj参数<br />
+    对func=update操作，user code 必选，updateparam参数必选，更新的内容<br />
+</body>
+</html>

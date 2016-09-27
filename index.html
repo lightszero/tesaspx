@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <p>
+        this is first PAGE
+    </p>
+    <p>
+        PPSystem
+    </p>
+    <p>
+        ParserPluginSystem是一个处理复杂业务的Http系统
+    </p>
+    <p>
+        功能如下：
+    </p>
+    <p>
+        <a href="filepool/index.html">filepool</a>文件池的接口
+    </p>
+    <p>
+        <a href="/pluginlist.aspx">/pluginlist.aspx</a>显示插件列表
+    </p>
+    <p>
+        <a href="/pluginlist.aspx?clear">/pluginlist.aspx?clear</a>显示插件列表，重新读config.json
+    </p>
+    <p>
+        <a href="/pluginlist.aspx?test">/pluginlist.aspx?test</a>显示插件列表，并调用插件做测试
+    </p>
+    <p>
+        <a href="/plugin.aspx?plugin=fbxrepack&param=_help_">/plugin.aspx?plugin=fbxrepack & param=_help_</a>调用某个插件的help信息
+    </p>
+        <p>
+        <a ">/plugin.aspx?plugin=fbxrepack & param=_post_</a>
+            调用某个插件,文件块是post上来的,返回的是json
+         然后调用/getanyfile.aspx?d:\\abc.ddd 根据return的文件名就可以下载对应的内容
+    </p>
+    <p>下面是post测试</p>
+    <form action="plugin.aspx" enctype="multipart/form-data" method="post" >
+       <p> 插件：<input type ="text" name ="plugin" value="fbxrepack"/></p>
+       <p> 文件：<input type="file" name="file" /></p>
+       <p>  <input type="submit" value="提交" /></p>
+    </form>
+</body>
+</html>
